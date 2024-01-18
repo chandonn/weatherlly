@@ -1,9 +1,9 @@
-import { data } from "../../types/data"
+import { Data } from "../../types/data"
 import { getCurrentDate } from "../../utils"
 import { WeatherIcon } from "../Icon/Icon"
 import "./Details.css"
 
-export const Details = (data: data) => {
+export const Details = (data: Data) => {
   const date = getCurrentDate()
 
   return (

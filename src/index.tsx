@@ -8,12 +8,16 @@ import reportWebVitals from './reportWebVitals'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
   faMagnifyingGlass,
-  faBarsStaggered
+  faBarsStaggered,
+  faXmark,
+  faX
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
   faMagnifyingGlass,
-  faBarsStaggered
+  faBarsStaggered,
+  faXmark,
+  faX
 )
 
 const root = ReactDOM.createRoot(

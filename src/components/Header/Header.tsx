@@ -1,8 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import "./Header.css"
-import { Search } from "../Search/Search"
+import { useContext } from "react"
+import { Store } from "../../store/state"
 
 export const Header = () => {
+  const weatherData = useContext(Store)
+
   return (
     <div className="header">
       <i>
@@ -11,11 +14,9 @@ export const Header = () => {
       <h3>
         Weatherlly
       </h3>
-      <i>
+      <i onClick={() => weatherData.dispatchSearchActive(true)}>
         <FontAwesomeIcon icon={["fas", "magnifying-glass"]} size="2xl" />
       </i>
-
-      <Search />
     </div>
   )
 }

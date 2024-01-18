@@ -1,6 +1,6 @@
-import { data } from "../types/data";
+import { Data } from "../types/data";
 
-export const mock: data = {
+export const mock: Data = {
   city: {
     name: 'Rio de Janeiro',
   },

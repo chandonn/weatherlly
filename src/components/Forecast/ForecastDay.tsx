@@ -1,8 +1,8 @@
 import React, { useState } from "react"
-import { weather } from "../../types/data"
+import { Weather } from "../../types/data"
 import { WeatherIcon } from "../Icon/Icon"
 
-export const ForecastDay = (props: weather) => {
+export const ForecastDay = (props: Weather) => {
     const [hover, setHover] = useState(false)
 
     return (

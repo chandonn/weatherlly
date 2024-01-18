@@ -1,4 +1,4 @@
-export type weather = {
+export type Weather = {
   temperature: {
     celsius: number
     fahrenheit: number
@@ -12,11 +12,11 @@ export type weather = {
   date: string
 }
 
-export type data = {
+export type Data = {
   city?: {
     name: string
   }
-  weather?: weather & {
-    forecast?: weather[]
+  weather?: Weather & {
+    forecast?: Weather[]
   }
 }

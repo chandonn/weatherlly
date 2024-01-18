@@ -1,4 +1,4 @@
-import { weather } from "../../types/data"
+import { Weather } from "../../types/data"
 import {
   WiDaySunny,
   WiDayCloudy,
@@ -9,7 +9,7 @@ import {
   WiHumidity
 } from "weather-icons-react"
 
-export const WeatherIcon = (props: { description: weather["description"]; size?: number | string, color?: string }) => {
+export const WeatherIcon = (props: { description: Weather["description"]; size?: number | string, color?: string }) => {
 
   const iconNameMap: { [key: string]: JSX.Element } = {
     "sun": <WiDaySunny size={props.size} color={props.color} />,

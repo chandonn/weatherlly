@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { getMockData } from "../services"
-import { data } from "../types/data"
+import { Data } from "../types/data"
 
-export const useWeatherData = (place: string): data => {
+export const useWeatherData = (place: string): Data => {
     const [weather, setWeather] = useState({})
     
     useEffect(() => {

@@ -1,5 +1,5 @@
 import { mock } from "../assets/mock"
-import { data } from "../types/data"
+import { Data } from "../types/data"
 
 export const api = async () => {
   await fetch("", {
@@ -7,7 +7,7 @@ export const api = async () => {
   })
 }
 
-export const getMockData = (): Promise<data> => {
+export const getMockData = (): Promise<Data> => {
   return new Promise((resolve, reject) => {
     try {
         

@@ -24,6 +24,7 @@ code {
   width: 100vw;
   background-color: #023047;
   flex-direction: column;
+  position: relative;
 }
 
 .center {
