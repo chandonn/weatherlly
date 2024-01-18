@@ -1,7 +1,10 @@
-body {
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+body {
   font-family: -apple-system, 'Roboto', BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -16,9 +19,11 @@ code {
 }
 
 .full-page {
+  display: flex;
   height: 100vh;
   width: 100vw;
   background-color: #023047;
+  flex-direction: column;
 }
 
 .center {
@@ -26,4 +31,8 @@ code {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.closed {
+  display: none;
 }
