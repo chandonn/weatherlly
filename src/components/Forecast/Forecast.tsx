@@ -1,8 +1,13 @@
 import { ForecastDay } from './ForecastDay'
-import { Data } from '../../types/data'
 import "./Forecast.css"
+import { useContext } from 'react'
+import { Store } from '../../store/state'
 
-export const Forecast = (data: Data) => {
+export const Forecast = () => {
+  const { data } = useContext(Store)
+  console.log(data);
+  
+
   function renderForecastDays() {
     const blocks = data.weather?.forecast?.map((it, index) => (
       <ForecastDay key={index} {...it} />

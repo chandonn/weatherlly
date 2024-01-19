@@ -1,22 +1,26 @@
 export type Weather = {
-  temperature: {
-    celsius: number
-    fahrenheit: number
-    kelvin: number
-  }
-  more: {
-    windSpeed: number
-    humidity: number
-  }
-  description: string,
+  temperature: string
+  windSpeed: string
+  humidity: string
+  description: WeatherCode,
   date: string
 }
 
 export type Data = {
-  city?: {
-    name: string
-  }
   weather?: Weather & {
     forecast?: Weather[]
   }
 }
+
+export type Geolocation = {
+  name: string,
+  latitude: string,
+  longitude: string,
+  country_code: string,
+  timezone: string,
+  country: string,
+}
+
+export type SearchResults = Geolocation[]
+
+export type WeatherCode = "Sunny" | "Sunny Cloudy" | "Fog" | "Drizzle" | "Freezing Drizzle" | "Rain" | "Freezing Rain" | "Snow fall" | "Snow grains" | "Rain showers" | "Snow showers" | "Thunderstorm"

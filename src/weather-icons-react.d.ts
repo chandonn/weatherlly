@@ -8,6 +8,12 @@ declare module "weather-icons-react" {
   const WiCloudy: JsxElement & { size: number; color: string }
   const WiStrongWind: JsxElement & { size: number; color: string }
   const WiHumidity: JsxElement & { size: number; color: string }
+  const WiFog : JsxElement & { size: number; color: string }
+  const WiRainMix : JsxElement & { size: number; color: string }
+  const WiRainWind : JsxElement & { size: number; color: string }
+  const WiSnow : JsxElement & { size: number; color: string }
+  const WiThunderstorm : JsxElement & { size: number; color: string }
+  const WiShowers : JsxElement & { size: number; color: string }
   
   module.exports = {
     WiDaySunny,
@@ -16,6 +22,12 @@ declare module "weather-icons-react" {
     WiRain,
     WiCloudy,
     WiStrongWind,
-    WiHumidity
+    WiHumidity,
+    WiFog,
+    WiRainMix,
+    WiRainWind,
+    WiSnow,
+    WiThunderstorm,
+    WiShowers,
   }
 }

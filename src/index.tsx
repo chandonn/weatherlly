@@ -10,14 +10,17 @@ import {
   faMagnifyingGlass,
   faBarsStaggered,
   faXmark,
-  faX
+  faX,
+  faMapLocationDot,
 } from '@fortawesome/free-solid-svg-icons'
+import { Context } from './store/state'
 
 library.add(
   faMagnifyingGlass,
   faBarsStaggered,
   faXmark,
-  faX
+  faX,
+  faMapLocationDot,
 )
 
 const root = ReactDOM.createRoot(
@@ -25,7 +28,9 @@ const root = ReactDOM.createRoot(
 )
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Context>
+      <RouterProvider router={router} />
+    </Context>
   </React.StrictMode>
 )
 

@@ -13,7 +13,7 @@ export const ForecastDay = (props: Weather) => {
         >
             <h3>{props.date}</h3>
             <WeatherIcon {...props} color={hover ? "#023047" : "#fdf0d5"} />
-            <h3>{props.temperature.celsius}°</h3>
+            <h3>{props.temperature}°</h3>
         </div>
     )
 }
