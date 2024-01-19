@@ -7,14 +7,12 @@ import "./Details.css"
 export const Details = () => {
   const date = getCurrentDate()
   const { geolocation, data } = useContext(Store)
-  console.log("GEO ", geolocation);
-  
 
   return (
     <div className="details">
       <div className="container">
         <div className="place">
-          <h2>{geolocation.name}</h2>
+          <h2>{geolocation.name}, {geolocation.country_code}</h2>
           <h4>{date}</h4>
         </div>
         <div className="temperature">

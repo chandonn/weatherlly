@@ -28,7 +28,7 @@ export const Search = () => {
           <FontAwesomeIcon icon={["fas", "x"]} size="2xl" />
         </div>
         <h2 className="search-title">City</h2>
-        <input type="text" className="search-field" onChange={e => debounceGetSearchResults(e)} />
+        <input name="search-field" type="text" className="search-field" onChange={e => debounceGetSearchResults(e)} />
         <SearchResults />
       </div>
     )

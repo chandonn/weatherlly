@@ -4,9 +4,7 @@ import { useContext } from 'react'
 import { Store } from '../../store/state'
 
 export const Forecast = () => {
-  const { data } = useContext(Store)
-  console.log(data);
-  
+  const { data } = useContext(Store)  
 
   function renderForecastDays() {
     const blocks = data.weather?.forecast?.map((it, index) => (

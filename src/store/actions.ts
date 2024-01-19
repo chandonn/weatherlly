@@ -27,3 +27,17 @@ export function updateGeolocationAction(state: State, payload: State["geolocatio
     }
   }
 }
+
+export function updateChangeTemperatureUnitAction(state: State, payload: State["menu"]["temperature_unit"]): State {
+  return {
+    ...state,
+    menu: {
+      active: false,
+      temperature_unit: payload
+    }
+  }
+}
+
+export function menuActiveAction(state: State, payload: State["menu"]["active"]):State {
+  return { ...state, menu: { ...state.menu, active: payload } }
+}

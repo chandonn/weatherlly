@@ -1,13 +1,33 @@
+import { useContext } from "react"
+import { Store } from "../../store/state"
+import "./Menu.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
 export const Menu = () => {
-  return (
-    <div className="menu">
-      <div className="menu-title">Show temperature in:</div>
-      <div className="option">
-        <h2>Celcius</h2>
+  const {
+    menu,
+    dispatchChangeTemperatureUnit,
+    dispatchMenuActive,
+  } = useContext(Store)
+
+  if (menu.active) {
+    return (
+      <div className="menu">
+        <div className="close" onClick={() => dispatchMenuActive(false)}>
+          <FontAwesomeIcon icon={["fas", "x"]} size="2xl" />
+        </div>
+        <h2 className="menu-title">Temperature unit</h2>
+        <div className="menu-options">
+          <div className="menu-option" onClick={() => dispatchChangeTemperatureUnit("")}>
+            <h3>Celcius, °C</h3>
+          </div>
+          <div className="menu-option" onClick={() => dispatchChangeTemperatureUnit("fahrenheit")}>
+            <h3>Fahrenheit, °F</h3>
+          </div>
+        </div>
       </div>
-      <div className="option">
-        <h2>Fahrenheit</h2>
-      </div>
-    </div>
-  )
+    )
+  } else {
+    return null
+  }
 }
