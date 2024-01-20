@@ -9,16 +9,24 @@ export const SearchResults = () => {
     dispatchUpdateGeolocation
   } = useContext(Store)
 
-  if (!!search.results.length) {
-    return (
-      <div className="search-results">
-        {search.results.map(it => (
-          <div className="search-result" onClick={() => dispatchUpdateGeolocation(it)}>
-            <h3>{`${it.name}, ${it.country_code}`}</h3>
-          </div>
-        ))}
-      </div>
-    )
+  if (search.query) {
+    if (!!search.results.length) {
+      return (
+        <div className="search-results">
+          {search.results.map(it => (
+            <div className="search-result" onClick={() => dispatchUpdateGeolocation(it)}>
+              <h3>{`${it.name}, ${it.country_code}`}</h3>
+            </div>
+          ))}
+        </div>
+      )
+    } else {
+      return (
+        <div className="search-results-empty">
+          <h3>No places found. Tip: look for rainbows</h3>
+        </div>
+      )
+    }
   } else {
     return (
       <div className="search-results-empty">

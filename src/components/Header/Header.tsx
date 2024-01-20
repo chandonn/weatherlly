@@ -4,7 +4,7 @@ import { useContext } from "react"
 import { Store } from "../../store/state"
 
 export const Header = () => {
-  const { dispatchSearchActive, dispatchMenuActive } = useContext(Store)
+  const { dispatchOpenSearch, dispatchMenuActive } = useContext(Store)
 
   return (
     <div className="header">
@@ -14,7 +14,7 @@ export const Header = () => {
       <h3>
         Weatherlly
       </h3>
-      <i onClick={() => dispatchSearchActive(true)}>
+      <i onClick={() => dispatchOpenSearch()}>
         <FontAwesomeIcon icon={["fas", "magnifying-glass"]} size="2xl" />
       </i>
     </div>

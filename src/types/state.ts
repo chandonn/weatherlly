@@ -9,9 +9,10 @@ export type State = {
   menu: { active: boolean, temperature_unit: "fahrenheit" | "" },
   geolocation: Geolocation
   data: Data
-  dispatchSearchActive: (it: State["search"]["active"]) => void
+  dispatchOpenSearch: () => void
+  dispatchCloseSearch: () => void
   dispatchMenuActive: (it: State["menu"]["active"]) => void
-  dispatchGeolocationSearchResults: (it: State["search"]["results"]) => void
+  dispatchGeolocationSearchResults: (it: State["search"]["results"], query?: State["search"]["query"]) => void
   dispatchWeatherData: (it: State["data"]["weather"]) => void
   dispatchGeolocation: (it: State["geolocation"]) => void
   dispatchUpdateGeolocation: (it: State["geolocation"]) => void,

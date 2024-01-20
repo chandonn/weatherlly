@@ -37,3 +37,7 @@ code {
 .closed {
   display: none;
 }
+
+.title {
+  font-weight: 300;
+}

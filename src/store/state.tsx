@@ -1,5 +1,5 @@
 import { PropsWithChildren, createContext, useState } from "react"
-import { geolocationAction, geolocationSearchResultsAction, menuActiveAction, searchActiveAction, updateChangeTemperatureUnitAction, updateGeolocationAction, weatherDataResultsAction } from "./actions"
+import { closeSearchAction, geolocationAction, geolocationSearchResultsAction, menuActiveAction, openSearchAction, updateChangeTemperatureUnitAction, updateGeolocationAction, weatherDataResultsAction } from "./actions"
 import { State } from "../types/state"
 
 const initialState: State = {
@@ -14,8 +14,9 @@ const initialState: State = {
     country: "Brazil",
     timezone: "America/Sao_Paulo"
   },
-  dispatchSearchActive: (it) => {},
-  dispatchGeolocationSearchResults: (it) => {},
+  dispatchOpenSearch: () => {},
+  dispatchCloseSearch: () => {},
+  dispatchGeolocationSearchResults: (it, query) => {},
   dispatchWeatherData: (it) => {},
   dispatchGeolocation: (it) => {},
   dispatchUpdateGeolocation: (it) => {},
@@ -28,12 +29,16 @@ export const Store = createContext(initialState)
 export const Context = ({ children }: PropsWithChildren) => {
   const [applicationState, setApplicationState] = useState(initialState)
 
-  const dispatchSearchActive =(it: State["search"]["active"]) => {
-    setApplicationState(searchActiveAction(applicationState, it))
+  const dispatchOpenSearch =() => {
+    setApplicationState(openSearchAction(applicationState))
   }
 
-  const dispatchGeolocationSearchResults = (it: State["search"]["results"]) => {
-    setApplicationState(geolocationSearchResultsAction(applicationState, it))
+  const dispatchCloseSearch =() => {
+    setApplicationState(closeSearchAction(applicationState))
+  }
+
+  const dispatchGeolocationSearchResults = (it: State["search"]["results"], query?: State["search"]["query"]) => {
+    setApplicationState(geolocationSearchResultsAction(applicationState, it, query))
   }
 
   const dispatchWeatherData = (it: State["data"]["weather"]) => {
@@ -59,13 +64,14 @@ export const Context = ({ children }: PropsWithChildren) => {
   return (
     <Store.Provider value={Object.freeze({
       ...applicationState,
-      dispatchSearchActive,
+      dispatchOpenSearch,
+      dispatchCloseSearch,
       dispatchGeolocationSearchResults,
       dispatchWeatherData,
       dispatchGeolocation,
       dispatchUpdateGeolocation,
       dispatchChangeTemperatureUnit,
-      dispatchMenuActive
+      dispatchMenuActive,
     })}>
       {children}
     </Store.Provider>

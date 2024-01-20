@@ -1,11 +1,15 @@
 import { State } from "../types/state"
 
-export function searchActiveAction(state: State, payload: State["search"]["active"]):State {
-  return { ...state, search: { ...state.search, active: payload } }
+export function openSearchAction(state: State):State {
+  return { ...state, search: { ...state.search, active: true } }
 }
 
-export function geolocationSearchResultsAction(state: State, payload: State["search"]["results"]):State {
-  return { ...state, search: { ...state.search, results: payload } }
+export function closeSearchAction(state: State):State {
+  return { ...state, search: { ...state.search, active: false, results: [], query: "" } }
+}
+
+export function geolocationSearchResultsAction(state: State, payload: State["search"]["results"], query: State["search"]["query"] = ""):State {
+  return { ...state, search: { ...state.search, results: payload, query } }
 }
 
 export function weatherDataResultsAction(state: State, payload: State["data"]["weather"]):State {
@@ -23,7 +27,8 @@ export function updateGeolocationAction(state: State, payload: State["geolocatio
     search: {
       ...state.search,
       results: [],
-      active: false
+      active: false,
+      query: ""
     }
   }
 }

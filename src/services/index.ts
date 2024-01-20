@@ -36,7 +36,7 @@ export const getWeatherData = async (geolocation: State["geolocation"], menu: St
     return apiToWeather(json)
 
   } catch (e) {
-    throw new Error()
+    throw e
   }
 }
 
@@ -70,6 +70,6 @@ export const getGeolocationSearchResults = async (query: string): Promise<Search
 
     return apiToLocation(json)
   } catch (e) {
-    throw new Error()
+    throw e
   }
 }
