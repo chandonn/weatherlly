@@ -1,0 +1,39 @@
+.search-results {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.search-results .search-result {
+    cursor: pointer;
+    padding: 0 1em;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-results .search-result h3 {
+    font-size: 3em;
+    transition: all 0.2s;
+}
+
+.search-results .search-result h3:hover {
+    color: #023047;
+}
+
+.search-results-empty, .search-results-loading {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-results-loading {
+    flex-direction: column;
+}
+
+.search-results-empty svg {
+    font-size: 5em;
+}
