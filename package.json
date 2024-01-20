@@ -2,7 +2,7 @@
   "name": "weatherlly",
   "version": "0.0.1",
   "author": "Alexandre Correa de Oliveira",
-  "homepage": "https://chandonn.github.io/weatherlly",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",

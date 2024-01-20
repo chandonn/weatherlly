@@ -1,14 +1,19 @@
 import React from 'react'
 import {
-  createBrowserRouter,
+  createHashRouter,
 } from 'react-router-dom'
 import { MainDecorator } from './Root/MainDecorator'
 import { ErrorPage } from './ErrorPage/ErrorPage'
 import '../styles/index.css'
 import { HomePage } from './HomePage/HomePage'
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   [
+    {
+      path: '*',
+      element: <ErrorPage />,
+      errorElement: <ErrorPage />,
+    },
     {
       path: '/',
       element: <MainDecorator />,
@@ -20,10 +25,7 @@ const router = createBrowserRouter(
         }
       ]
     }
-  ],
-  {
-    basename: process.env.PUBLIC_URL
-  }
+  ]
 )
 
 export default router
