@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { Store } from "../../store/state"
 import "./SearchResults.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Loading } from "../Loading/Loading"
 
 export const SearchResults = () => {
   const {
@@ -10,11 +11,20 @@ export const SearchResults = () => {
   } = useContext(Store)
 
   if (search.query) {
+    if (search.loading) {
+      return (
+        <div className="search-results-loading">
+          <FontAwesomeIcon icon={["far", "snowflake"]} size="2xl" fade />
+          <h3>Loading...</h3>
+        </div>
+      )
+    }
+
     if (!!search.results.length) {
       return (
         <div className="search-results">
-          {search.results.map(it => (
-            <div className="search-result" onClick={() => dispatchUpdateGeolocation(it)}>
+          {search.results.map((it, index) => (
+            <div key={index} className="search-result" onClick={() => dispatchUpdateGeolocation(it)}>
               <h3>{`${it.name}, ${it.country_code}`}</h3>
             </div>
           ))}

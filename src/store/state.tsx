@@ -1,11 +1,13 @@
 import { PropsWithChildren, createContext, useState } from "react"
-import { closeSearchAction, geolocationAction, geolocationSearchResultsAction, menuActiveAction, openSearchAction, updateChangeTemperatureUnitAction, updateGeolocationAction, weatherDataResultsAction } from "./actions"
+import { closeSearchAction, geolocationAction, geolocationSearchResultsAction, loadingAction, loadingActionData, menuActiveAction, openSearchAction, updateChangeTemperatureUnitAction, updateGeolocationAction, weatherDataResultsAction } from "./actions"
 import { State } from "../types/state"
 
 const initialState: State = {
-  search: { active: false, query: "", results: [] },
+  search: { active: false, query: "", results: [], loading: false },
   menu: { active: false, temperature_unit: "" },
-  data: {},
+  data: {
+    loading: false
+  },
   geolocation: {
     name: "Rio de Janeiro",
     latitude: "-22.90642",
@@ -22,6 +24,8 @@ const initialState: State = {
   dispatchUpdateGeolocation: (it) => {},
   dispatchChangeTemperatureUnit: (it) => {},
   dispatchMenuActive: (it) => {},
+  dispatchLoading: (it) => {},
+  dispatchLoadingData: (it) => {},
 }
 
 export const Store = createContext(initialState)
@@ -57,8 +61,16 @@ export const Context = ({ children }: PropsWithChildren) => {
     setApplicationState(updateChangeTemperatureUnitAction(applicationState, it))
   }
 
-  const dispatchMenuActive =(it: State["menu"]["active"]) => {
+  const dispatchMenuActive = (it: State["menu"]["active"]) => {
     setApplicationState(menuActiveAction(applicationState, it))
+  }
+
+  const dispatchLoading = (it: State["search"]["loading"]) => {
+    setApplicationState(loadingAction(applicationState, it))
+  }
+
+  const dispatchLoadingData = (it: State["data"]["loading"]) => {
+    setApplicationState(loadingActionData(applicationState, it))
   }
 
   return (
@@ -72,6 +84,8 @@ export const Context = ({ children }: PropsWithChildren) => {
       dispatchUpdateGeolocation,
       dispatchChangeTemperatureUnit,
       dispatchMenuActive,
+      dispatchLoading,
+      dispatchLoadingData,
     })}>
       {children}
     </Store.Provider>

@@ -13,6 +13,7 @@ import {
   faX,
   faMapLocationDot,
 } from '@fortawesome/free-solid-svg-icons'
+import { faSnowflake } from '@fortawesome/free-regular-svg-icons'
 import { Context } from './store/state'
 
 library.add(
@@ -21,6 +22,7 @@ library.add(
   faXmark,
   faX,
   faMapLocationDot,
+  faSnowflake
 )
 
 const root = ReactDOM.createRoot(

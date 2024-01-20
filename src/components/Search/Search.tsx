@@ -6,9 +6,11 @@ import "./Search.css"
 import { getGeolocationSearchResults } from "../../services"
 
 export const Search = () => {
-  const { search, dispatchCloseSearch, dispatchGeolocationSearchResults } = useContext(Store)
+  const { search, dispatchCloseSearch, dispatchGeolocationSearchResults, dispatchLoading } = useContext(Store)
 
   function debounceGetSearchResults(e: ChangeEvent<HTMLInputElement>) {
+    dispatchLoading(true)
+
     if (e.target.value.length > 2) {
       getGeolocationSearchResults(e.target.value).then(it => {
         dispatchGeolocationSearchResults(it, e.target.value)

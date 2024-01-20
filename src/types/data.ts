@@ -10,6 +10,7 @@ export type Data = {
   weather?: Weather & {
     forecast?: Weather[]
   }
+  loading: boolean
 }
 
 export type Geolocation = {
