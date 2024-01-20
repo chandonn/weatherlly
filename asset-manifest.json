@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/weatherlly/static/css/main.64ebcf67.css",
-    "main.js": "/weatherlly/static/js/main.ca4eaf52.js",
-    "static/js/787.70662f4f.chunk.js": "/weatherlly/static/js/787.70662f4f.chunk.js",
-    "index.html": "/weatherlly/index.html",
-    "main.64ebcf67.css.map": "/weatherlly/static/css/main.64ebcf67.css.map",
-    "main.ca4eaf52.js.map": "/weatherlly/static/js/main.ca4eaf52.js.map",
-    "787.70662f4f.chunk.js.map": "/weatherlly/static/js/787.70662f4f.chunk.js.map"
+    "main.css": "https://chandonn.github.io/weatherlly/static/css/main.64ebcf67.css",
+    "main.js": "https://chandonn.github.io/weatherlly/static/js/main.96b04e3d.js",
+    "static/js/787.70662f4f.chunk.js": "https://chandonn.github.io/weatherlly/static/js/787.70662f4f.chunk.js",
+    "index.html": "https://chandonn.github.io/weatherlly/index.html",
+    "main.64ebcf67.css.map": "https://chandonn.github.io/weatherlly/static/css/main.64ebcf67.css.map",
+    "main.96b04e3d.js.map": "https://chandonn.github.io/weatherlly/static/js/main.96b04e3d.js.map",
+    "787.70662f4f.chunk.js.map": "https://chandonn.github.io/weatherlly/static/js/787.70662f4f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.64ebcf67.css",
-    "static/js/main.ca4eaf52.js"
+    "static/js/main.96b04e3d.js"
   ]
 }
