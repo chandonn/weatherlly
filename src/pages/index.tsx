@@ -7,18 +7,23 @@ import { ErrorPage } from './ErrorPage/ErrorPage'
 import '../styles/index.css'
 import { HomePage } from './HomePage/HomePage'
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <MainDecorator />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          path: '/',
+          element: <HomePage />
+        }
+      ]
+    }
+  ],
   {
-    path: '/',
-    element: <MainDecorator />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: '/',
-        element: <HomePage />
-      }
-    ]
+    basename: process.env.PUBLIC_URL
   }
-])
+)
 
 export default router
