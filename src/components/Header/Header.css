@@ -9,3 +9,7 @@
 .header i {
     cursor: pointer;
 }
+
+.header h3 {
+    font-weight: 300;
+}

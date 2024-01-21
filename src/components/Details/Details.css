@@ -26,11 +26,32 @@
 }
 
 .temperature {
-    margin-top: 32px;
+    margin: 32px 0;
     display: flex;
     justify-content: space-between;
 }
 
-.description {
-    margin-top: 32px;
+.details .container {
+    background-color: rgba(2, 48, 71, 0.5);
+    padding: 5%;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .details {
+        padding-top: 5%;
+        padding-bottom: 15%;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-grow: unset;
+    }
+
+    .temperature {
+        width: 100%;
+        align-items: center;
+        margin: 20px 0;
+    }
 }

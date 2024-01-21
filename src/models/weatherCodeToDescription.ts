@@ -9,9 +9,9 @@ export function weatherCodeToDescription(code: number): WeatherCode {
     "Freezing Drizzle": [56, 57],
     "Rain": [61, 63, 65],
     "Freezing Rain": [66, 67],
+    "Rain showers": [80, 81, 82],
     "Snow fall": [71, 73, 75],
     "Snow grains": [77],
-    "Rain showers": [80, 81, 82],
     "Snow showers": [85, 86],
     "Thunderstorm": [95, 96, 99],
   }

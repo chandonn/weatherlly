@@ -6,9 +6,10 @@ import { Outlet } from "react-router-dom"
 import { Search } from "../../components/Search/Search"
 import { Menu } from "../../components/Menu/Menu"
 import { Loading } from "../../components/Loading/Loading"
+import "./MainDecorator.css"
 
 export const MainDecorator = () => {
-  const { dispatchWeatherData, geolocation, menu, search, data } = useContext(Store)
+  const { dispatchWeatherData, geolocation, menu, data } = useContext(Store)
 
   useEffect(() => {
     getWeatherData(geolocation, menu).then(res => {
@@ -22,7 +23,7 @@ export const MainDecorator = () => {
     )
   } else {
     return (
-      <div className='full-page'>
+      <div className='full-page background-image sunny'>
         <Header />
         <Search />
         <Menu />

@@ -58,7 +58,11 @@ export const Context = ({ children }: PropsWithChildren) => {
   }
 
   const dispatchChangeTemperatureUnit = (it: State["menu"]["temperature_unit"]) => {
-    setApplicationState(updateChangeTemperatureUnitAction(applicationState, it))
+    if (it === applicationState["menu"]["temperature_unit"]) {
+      dispatchMenuActive(false)
+    } else {
+      setApplicationState(updateChangeTemperatureUnitAction(applicationState, it))
+    }
   }
 
   const dispatchMenuActive = (it: State["menu"]["active"]) => {

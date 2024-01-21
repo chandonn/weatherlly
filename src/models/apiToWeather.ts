@@ -22,7 +22,7 @@ function buildForecast(daily: { [key: string]: any }, daily_units: { [key: strin
   const { time, weather_code, temperature_2m_min, temperature_2m_max } = daily
 
   const transformed = Array.from(time).map((it, index) => ({
-    temperature: `${temperature_2m_min[index]}${daily_units["temperature_2m_min"]}/${temperature_2m_max[index]}${daily_units["temperature_2m_max"]}`,
+    temperature: `${temperature_2m_min[index]}${daily_units["temperature_2m_min"]} / ${temperature_2m_max[index]}${daily_units["temperature_2m_max"]}`,
     date: index ? days[new Date((time[index] - offset) * 1000).getDay()] : "Today",
     description: weatherCodeToDescription(weather_code[index])
   })) as Data["weather"][]
