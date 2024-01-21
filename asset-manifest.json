@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "https://chandonn.github.io/weatherlly/static/css/main.9d184137.css",
+    "main.css": "https://chandonn.github.io/weatherlly/static/css/main.3b257ecb.css",
     "main.js": "https://chandonn.github.io/weatherlly/static/js/main.9c7042a8.js",
     "static/js/787.70662f4f.chunk.js": "https://chandonn.github.io/weatherlly/static/js/787.70662f4f.chunk.js",
     "static/media/weatherlly-rain.jpg": "https://chandonn.github.io/weatherlly/static/media/weatherlly-rain.05f77e0aabc44f0440fc.jpg",
@@ -10,12 +10,12 @@
     "static/media/weatherlly-sunny-cloudy.jpg": "https://chandonn.github.io/weatherlly/static/media/weatherlly-sunny-cloudy.8d59fb1cf74f6c025b94.jpg",
     "static/media/weatherlly-storm.jpg": "https://chandonn.github.io/weatherlly/static/media/weatherlly-storm.6b4621deec08b7e95799.jpg",
     "index.html": "https://chandonn.github.io/weatherlly/index.html",
-    "main.9d184137.css.map": "https://chandonn.github.io/weatherlly/static/css/main.9d184137.css.map",
+    "main.3b257ecb.css.map": "https://chandonn.github.io/weatherlly/static/css/main.3b257ecb.css.map",
     "main.9c7042a8.js.map": "https://chandonn.github.io/weatherlly/static/js/main.9c7042a8.js.map",
     "787.70662f4f.chunk.js.map": "https://chandonn.github.io/weatherlly/static/js/787.70662f4f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d184137.css",
+    "static/css/main.3b257ecb.css",
     "static/js/main.9c7042a8.js"
   ]
 }
