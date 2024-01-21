@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { Details } from "../../components/Details/Details"
 import { Forecast } from "../../components/Forecast/Forecast"
 import { Store } from "../../store/state"
-import { Loading } from "../../components/Loading/Loading"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import "./HomePage.css"
 
 export const HomePage = () => {
@@ -11,7 +11,12 @@ export const HomePage = () => {
   if (data.loading) {
     return (
       <div className="home-page">
-        <Loading />
+        <div className="home-page-loading">
+          <div>
+            <FontAwesomeIcon icon={["far", "snowflake"]} size="2xl" fade />
+            <h3>Loading...</h3>
+          </div>
+        </div>
       </div>
     )  
   } else {

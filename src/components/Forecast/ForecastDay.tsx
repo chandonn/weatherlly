@@ -11,9 +11,14 @@ export const ForecastDay = (props: Weather) => {
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
         >
-            <h3>{props.date}</h3>
-            <WeatherIcon {...props} color={hover ? "#023047" : "#fdf0d5"} />
-            <h3>{props.temperature}°</h3>
+            <div>
+                <WeatherIcon {...props} color={hover ? "#023047" : "#fdf0d5"} />
+                <h3>{props.date}</h3>
+            </div>
+            <div>
+                <h3>{props.temperature}°</h3>
+                <h5>{props.description}</h5>
+            </div>
         </div>
     )
 }
