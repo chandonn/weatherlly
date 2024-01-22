@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import "./Header.css"
 import { useContext } from "react"
 import { Store } from "../../store/state"
+import "./Header.css"
 
 export const Header = () => {
   const { dispatchOpenSearch, dispatchMenuActive } = useContext(Store)

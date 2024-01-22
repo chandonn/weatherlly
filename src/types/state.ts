@@ -1,4 +1,4 @@
-import { Data, Geolocation, SearchResults } from "./data"
+import { Data, Geolocation, SearchResults, WeatherCode } from "./data"
 
 export type State = {
   search: {
@@ -6,9 +6,12 @@ export type State = {
     query: string
     results: SearchResults,
     loading: boolean
-  },
-  menu: { active: boolean, temperature_unit: "fahrenheit" | "" },
+  }
+  menu: { active: boolean, temperature_unit: "fahrenheit" | "" }
   geolocation: Geolocation
+  config: {
+    background?: WeatherCode
+  }
   data: Data
   dispatchOpenSearch: () => void
   dispatchCloseSearch: () => void
@@ -20,4 +23,5 @@ export type State = {
   dispatchGeolocation: (it: State["geolocation"]) => void
   dispatchUpdateGeolocation: (it: State["geolocation"]) => void,
   dispatchChangeTemperatureUnit: (it: State["menu"]["temperature_unit"]) => void
+  dispatchUpdateBackgroundConfig: (it: State["config"]["background"]) => void
 }

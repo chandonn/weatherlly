@@ -6,8 +6,9 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: #FB8500;
+    background-color: #F0F0C9;
     padding: 12px 20px;
+    overflow: hidden;
 }
 
 .menu .close {
@@ -18,6 +19,8 @@
 
 .menu .menu-title {
     margin-top: 20px;
+    color: #124E78;
+    font-weight: 300;
 }
 
 .menu-options {
@@ -33,10 +36,11 @@
     padding: 2em 1em;
     background-color: transparent;
     transition: all 0.2s;
+    color: #124E78;
 }
 
 .menu-option:hover {
-    color: #023047;
+    color: #D74E09;
 }
 
 .menu-option h3 {

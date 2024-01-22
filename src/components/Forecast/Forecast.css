@@ -3,8 +3,6 @@
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
-    padding: 20px 0;
-    background-color: rgba(2, 48, 71, 0.5);
 }
 
 .forecast-day {
@@ -15,6 +13,8 @@
     align-items: center;
     justify-content: center;
     transition: all 0.2s;
+    background-color: rgba(18, 78, 120, 0.5);
+    padding: 2% 0;
 }
 
 .forecast-day svg {
@@ -23,8 +23,8 @@
 }
 
 .forecast-day:hover {
-    background-color: #fdf0d5;
-    color: #023047;
+    background-color: #F0F0C9;
+    color: #124E78;
 }
 
 .forecast-day + .forecast-day {
@@ -41,7 +41,7 @@
 
 @media screen and (max-width: 1200px) {
     .forecast-day h3 {
-        font-size: 1em;
+        font-size: 1.2em;
     }
 
     .forecast-day svg {
@@ -59,16 +59,16 @@
 @media screen and (max-width: 768px) {
     .forecast {
         flex-direction: column;
-        padding: 2%;
         flex-grow: 1;
     }
-
+    
     .forecast-day + .forecast-day {
         border-left: 0;
-        border-top: 1px solid rgba(253, 240, 213, 0.3);
+        border-top: 1px solid rgba(18, 78, 120, 0.3);
     }
-
+    
     .forecast-day {
+        padding: 0 2%;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
