@@ -2,7 +2,6 @@ import { useContext } from "react"
 import { Store } from "../../store/state"
 import "./SearchResults.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Loading } from "../Loading/Loading"
 
 export const SearchResults = () => {
   const {

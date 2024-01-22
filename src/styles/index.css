@@ -10,7 +10,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #fdf0d5;
+  color: #F0F0C9;
 }
 
 code {
@@ -22,7 +22,7 @@ code {
   display: flex;
   height: 100vh;
   width: 100vw;
-  background-color: #023047;
+  background-color: #124E78;
   flex-direction: column;
   position: relative;
 }

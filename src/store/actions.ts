@@ -1,3 +1,4 @@
+import { Weather } from "../types/data"
 import { State } from "../types/state"
 
 export function openSearchAction(state: State):State {
@@ -21,7 +22,17 @@ export function geolocationSearchResultsAction(state: State, payload: State["sea
 }
 
 export function weatherDataResultsAction(state: State, payload: State["data"]["weather"]):State {
-  return { ...state, data: { ...state.data, weather: payload, loading: false } }
+  return {
+    ...state,
+    data: { ...state.data,
+      weather: payload,
+      loading: false
+    },
+    config: {
+      ...state.config,
+      background: payload?.description
+    }
+  }
 }
 
 export function geolocationAction(state: State, payload: State["geolocation"]):State {
@@ -59,6 +70,16 @@ export function updateChangeTemperatureUnitAction(state: State, payload: State["
   }
 }
 
-export function menuActiveAction(state: State, payload: State["menu"]["active"]):State {
+export function menuActiveAction(state: State, payload: State["menu"]["active"]): State {
   return { ...state, menu: { ...state.menu, active: payload } }
+}
+
+export function updateBackgroundConfigAction(state: State, payload?: Weather["description"]): State {
+  return {
+    ...state,
+    config: {
+      ...state.config,
+      background: payload
+    }
+  }
 }

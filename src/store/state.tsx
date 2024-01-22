@@ -1,5 +1,5 @@
 import { PropsWithChildren, createContext, useState } from "react"
-import { closeSearchAction, geolocationAction, geolocationSearchResultsAction, loadingAction, loadingActionData, menuActiveAction, openSearchAction, updateChangeTemperatureUnitAction, updateGeolocationAction, weatherDataResultsAction } from "./actions"
+import { closeSearchAction, geolocationAction, geolocationSearchResultsAction, loadingAction, loadingActionData, menuActiveAction, openSearchAction, updateBackgroundConfigAction, updateChangeTemperatureUnitAction, updateGeolocationAction, weatherDataResultsAction } from "./actions"
 import { State } from "../types/state"
 
 const initialState: State = {
@@ -8,6 +8,7 @@ const initialState: State = {
   data: {
     loading: false
   },
+  config: {},
   geolocation: {
     name: "Rio de Janeiro",
     latitude: "-22.90642",
@@ -26,6 +27,7 @@ const initialState: State = {
   dispatchMenuActive: (it) => {},
   dispatchLoading: (it) => {},
   dispatchLoadingData: (it) => {},
+  dispatchUpdateBackgroundConfig: (it) => {},
 }
 
 export const Store = createContext(initialState)
@@ -77,6 +79,10 @@ export const Context = ({ children }: PropsWithChildren) => {
     setApplicationState(loadingActionData(applicationState, it))
   }
 
+  const dispatchUpdateBackgroundConfig = (it: State["config"]["background"]) => {
+    setApplicationState(updateBackgroundConfigAction(applicationState, it))
+  }
+
   return (
     <Store.Provider value={Object.freeze({
       ...applicationState,
@@ -90,6 +96,7 @@ export const Context = ({ children }: PropsWithChildren) => {
       dispatchMenuActive,
       dispatchLoading,
       dispatchLoadingData,
+      dispatchUpdateBackgroundConfig,
     })}>
       {children}
     </Store.Provider>

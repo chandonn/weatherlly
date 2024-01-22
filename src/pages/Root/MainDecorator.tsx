@@ -9,7 +9,13 @@ import { Loading } from "../../components/Loading/Loading"
 import "./MainDecorator.css"
 
 export const MainDecorator = () => {
-  const { dispatchWeatherData, geolocation, menu, data } = useContext(Store)
+  const {
+    dispatchWeatherData,
+    geolocation,
+    menu,
+    data,
+    config
+  } = useContext(Store)
 
   useEffect(() => {
     getWeatherData(geolocation, menu).then(res => {
@@ -22,8 +28,11 @@ export const MainDecorator = () => {
       <Loading />
     )
   } else {
+
+    console.log(config);
+
     return (
-      <div className='full-page background-image sunny'>
+      <div className={`full-page background-image ${config.background?.replace(" ", "-") || data.weather.description.replace(" ", "-")}`}>
         <Header />
         <Search />
         <Menu />

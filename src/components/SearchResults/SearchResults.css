@@ -11,16 +11,18 @@
     background-color: transparent;
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex: 1;
 }
 
 .search-results .search-result h3 {
     font-size: 3em;
     transition: all 0.2s;
+    text-align: start;
+    color: #124E78;
 }
 
 .search-results .search-result h3:hover {
-    color: #023047;
+    color: #D74E09;
 }
 
 .search-results-empty, .search-results-loading {
@@ -36,4 +38,14 @@
 
 .search-results-empty svg {
     font-size: 5em;
+}
+
+@media screen and (max-width: 768px) {
+    .search-results-empty svg {
+        font-size: 3em;
+    }
+
+    .search-results .search-result h3 {
+        font-size: 1.75em;
+    }
 }

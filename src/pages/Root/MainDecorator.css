@@ -4,28 +4,53 @@
     background-position: center;
 }
 
-.sunny {
+
+.Sunny {
     background-image: url("../../assets/img/weatherlly-sunny.jpg");
 }
 
-.rain {
-    background-image: url("../../assets/img/weatherlly-rain.jpg");
-}
-
-.sunny-cloudy {
+.Sunny-Cloudy {
     background-image: url("../../assets/img/weatherlly-sunny-cloudy.jpg");
 }
 
-.fog {
+.Fog {
     background-image: url("../../assets/img/weatherlly-fog.jpg");
 }
 
-.storm {
-    background-image: url("../../assets/img/weatherlly-storm.jpg");
+.Drizzle {
+    background-image: url("../../assets/img/weatherlly-rain.jpg");
 }
 
-.snow {
+.Freezing-Drizzle {
+    background-image: url("../../assets/img/weatherlly-rain.jpg");
+}
+
+.Rain {
+    background-image: url("../../assets/img/weatherlly-rain.jpg");
+}
+
+.Freezing-Rain {
+    background-image: url("../../assets/img/weatherlly-rain.jpg");
+}
+
+.Rain-showers {
+    background-image: url("../../assets/img/weatherlly-rain.jpg");
+}
+
+.Snow-fall {
     background-image: url("../../assets/img/weatherlly-snow.jpg");
+}
+
+.Snow-grains {
+    background-image: url("../../assets/img/weatherlly-snow.jpg");
+}
+
+.Snow-showers {
+    background-image: url("../../assets/img/weatherlly-snow.jpg");
+}
+
+.Thunderstorm {
+    background-image: url("../../assets/img/weatherlly-storm.jpg");
 }
 
 @media screen and (max-width: 768px) {

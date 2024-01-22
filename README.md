@@ -41,8 +41,11 @@ Head to [Weatherlly](https://chandonn.github.io/weatherlly/) to see the live pro
 - [Font Awesome](https://fontawesome.com/)
 - [Weather Icons React](https://najens.github.io/weather-icons-react/)
 - [GitHub Pages](https://www.npmjs.com/package/gh-pages)
+- [React Spring](https://www.npmjs.com/package/react-spring)
 
 ### UI
 - Font: [Roboto](https://fonts.google.com/specimen/Roboto)
 - Images: [Unsplash](https://unsplash.com/)
+- Animations: [React Spring](https://www.npmjs.com/package/react-spring)
+
 The UI design was built using a simple and clean design. Combining elements such as thin fonts for texts and translucent containers. That enhances the experience when using the application, which showcases beautiful background images, catching users' attention, while presenting the most important pieces of information at the top of the screen.
